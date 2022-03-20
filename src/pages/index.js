@@ -1,4 +1,5 @@
 
+import Card from '../components/Card'
 import {Main,Header,Title,SubTitle,CardContainer} from '../styles/Home'
 
 export default function Home() {
@@ -9,7 +10,7 @@ export default function Home() {
         <SubTitle>Trabalho de Ambientes de Desenvolvimento de software</SubTitle>
       </Header>
       <CardContainer>
-        <p>Aqui vai ficar os trabalhos</p>
+        <Card number={1} name="Número Primo" path="prime"/>
       </CardContainer>
     </Main>
   )

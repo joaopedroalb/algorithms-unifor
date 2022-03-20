@@ -1,0 +1,31 @@
+import styled from "styled-components";
+
+export const CardMain = styled.div`
+    width: 280px;
+    background: var(--orange);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1rem;
+    gap: .75rem;
+    border-radius: 30px;
+    cursor: pointer;
+
+    overflow-y: hidden;
+    text-overflow: ellipsis;
+`
+
+export const Circle = styled.div`
+    padding: 25px;
+    border-radius: 50%;
+    background: var(--dark-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+`
+
+export const Title = styled.h1`
+    color: var(--dark-blue);
+    font-size: 1.5rem;
+    font-weight: 600;
+`
