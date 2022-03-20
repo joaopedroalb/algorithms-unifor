@@ -7,6 +7,7 @@ const GlobalStyle = createGlobalStyle`
         --blue:#118AB2;
         --orange:#FF674D;
         --green-ligth:#06D6A0;
+        --red:#ef233c;
     }
     html,
     body {
