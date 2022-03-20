@@ -13,6 +13,11 @@ export const CardMain = styled.div`
 
     overflow-y: hidden;
     text-overflow: ellipsis;
+
+    transition: 400ms;
+    &:hover{
+        transform: scale(1.05);
+    }
 `
 
 export const Circle = styled.div`
