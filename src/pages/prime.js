@@ -1,6 +1,5 @@
-import React from 'react'
-import { useState } from 'react/cjs/react.production.min'
 import Layout from '../components/Layout'
+import { useState } from 'react'
 import {Main,Title,InputContainer,Input,Button} from '../styles/Prime'
 
 export default function Prime() {
