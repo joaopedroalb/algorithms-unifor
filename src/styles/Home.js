@@ -33,11 +33,11 @@ export const SubTitle = styled.p`
 `
 
 export const CardContainer = styled.div`
-    width: 100%;
+    width: 80%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: flex-start;
-    gap: 2.5rem;
-    padding: 0 2rem;
+    justify-content: center;
+    gap: 3rem;
+    
 `
