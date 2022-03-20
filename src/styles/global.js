@@ -23,7 +23,10 @@ const GlobalStyle = createGlobalStyle`
     * {
         box-sizing: border-box;
         list-style: none;
-        
+    }
+    h1,h2,h3,h4,p{
+        margin: 0;
+        padding: 0;
     }
 ` 
 
