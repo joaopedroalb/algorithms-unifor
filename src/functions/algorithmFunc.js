@@ -23,7 +23,7 @@ export const isPrime = (number) => {
 //List<Number>
 export const summation = (lstNumber) => {
     return lstNumber
-            .map((value)=>{return Number.isInteger(value)&&value})
+            .map((value)=>{return !isNaN(value)&&value})
             .reduce((a,b)=>{return a+b})
 }
 

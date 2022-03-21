@@ -13,15 +13,14 @@ export default function Sum() {
     }
       
     const sum = summation(getListNumber())
-    console.log(sum)
     setResult(sum)
   }
 
   function getListNumber(){
-    const lstTxt = text.split(';')
+    const lstTxt = text.split(' ')
     const lstNumber = lstTxt
-                          .filter(x=>!isNaN(x))
-                          .map(x=>{return parseFloat(x)})
+                        .filter(x=>!isNaN(x))
+                        .map(x=>{return parseFloat(x)})
     return lstNumber
   }
 
@@ -31,14 +30,14 @@ export default function Sum() {
       <Main>
         <Header>
           <Title>Digite sua lista</Title>
-          <SubTitle>Separe seus numeros por {`";"`} Ex: <strong>{`"5;4;2.2;6"`}</strong> que vai ser igual a <strong>{`"5,4,2.2,6"`}</strong></SubTitle>
+          <SubTitle>Separe seus numeros por espaços Ex: <strong>{`"5 4 2.2 6"`}</strong> que vai ser igual a <strong>{`"5,4,2.2,6"`}</strong></SubTitle>
         </Header>
         <InputContainer>
-          <Input type="text" onChange={({ target }) => setText(target.value)} />
+          <Input type="text" onChange={({ target }) => setText(target.value)} lang="en-US"/>
           <Button onClick={()=>handleClick()}>Somar</Button>
         </InputContainer>
         {
-          result &&
+          result!=null &&
           (
             <Result>Resultado da soma: <b>{result}</b></Result>
           )
