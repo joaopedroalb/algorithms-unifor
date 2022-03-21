@@ -35,24 +35,3 @@ export const Input = styled.input`
         outline: none;
     }
 `
-
-export const Button = styled.button`
-    width: 180px;
-    max-width: 60vw;
-    padding: .8rem;
-    border: none;
-    border-radius: 20px;
-    font-weight: 600;
-    background: var(--orange);
-    color: var(--white);
-    cursor: pointer;
-
-    &:focus{
-        outline: none;
-    }
-
-    transition: 400ms;
-    &:hover{
-        transform: scale(1.05);
-    }
-`
