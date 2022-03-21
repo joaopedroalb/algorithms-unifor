@@ -1,4 +1,5 @@
 import React from 'react'
+import HomeLink from '../HomeLink'
 import {Main,Header,Title,Subtitle,Content} from './styles'
 
 export default function Layout(props) {
@@ -11,6 +12,7 @@ export default function Layout(props) {
         <Content>
             {props.children}
         </Content>
+        <HomeLink/>
     </Main>
   )
 }
