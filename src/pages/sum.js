@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Layout from '../components/Layout'
 import { summation } from '../functions/algorithmFunc'
-import { Main, Header, Title, SubTitle, InputContainer, Input, Button,Result } from '../styles/SumStyle'
+import { Main, Header, Title, SubTitle, InputContainer, Input, Button,Result } from '../styles/StylePageV2'
 export default function Sum() {
   const [text, setText] = useState(null)
   const [result, setResult] = useState(null)

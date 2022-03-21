@@ -21,7 +21,8 @@ export const CardMain = styled.div`
 `
 
 export const Circle = styled.div`
-    padding: 25px;
+    padding: 20px;
+    font-size: 1.6rem;
     border-radius: 50%;
     background: var(--dark-blue);
     display: flex;

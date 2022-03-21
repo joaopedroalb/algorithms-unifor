@@ -1,6 +1,6 @@
 import Layout from '../components/Layout'
 import { useState } from 'react'
-import {Main,Title,InputContainer,Input,Button} from '../styles/Prime'
+import {Main,Title,InputContainer,Input,Button} from '../styles/StylePageV1'
 import { isPrime } from '../functions/algorithmFunc'
 
 export default function Prime() {
