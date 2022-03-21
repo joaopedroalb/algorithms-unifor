@@ -13,20 +13,23 @@ export default function Sum() {
     }
       
     const sum = summation(getListNumber())
-    setResult(sum)
+    setResult({
+      lst:getListNumber().join(','),
+      sum:sum
+    })
   }
 
   function getListNumber(){
     const lstTxt = text.split(' ')
     const lstNumber = lstTxt
-                        .filter(x=>!isNaN(x))
+                        .filter(x=>!isNaN(x) && x!=='')
                         .map(x=>{return parseFloat(x)})
     return lstNumber
   }
 
 
   return (
-    <Layout title="Somatório" description="Algoritmo para fazer o somatório de uma lista de números">
+    <Layout title="Somatório" description="Algoritmo que soma um conjunto de números">
       <Main>
         <Header>
           <Title>Digite sua lista</Title>
@@ -39,7 +42,7 @@ export default function Sum() {
         {
           result!=null &&
           (
-            <Result>Resultado da soma: <b>{result}</b></Result>
+            <Result>O somatório de {result.lst} é <b>{result.sum}</b></Result>
           )
         }
       </Main>
