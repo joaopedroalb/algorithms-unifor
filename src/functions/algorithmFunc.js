@@ -36,6 +36,20 @@ export const fibonacci = (number) =>{
     return fibonacci(number-1)+fibonacci(number-2)
 }
 
+export const fibonacciWithouRecursion = (number) =>{
+    if(number == 1) return 0
+    if(number <= 3) return 1
+
+    let acc = 1;
+    let result = 1;
+    for(let i = 2; i<number-1; i++){
+        let aux = result
+        result = acc + result
+        acc = aux
+    }
+    return result
+}
+
 //Number
 export const mdc = (x,y) =>{
     let remainder = x<y ? x:y
