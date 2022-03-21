@@ -34,12 +34,15 @@ export default function Mdc() {
   }
 
   function isValid(){
-    return numbers.valueA !== null && numbers.valueB !== null;
+    return numbers.valueA !== null && numbers.valueB !== null && numbers.valueA>0 && numbers.valueB>0;
   }
 
   function updateMdc(){
-    if(!isValid())
-      return 
+    if(!isValid()){
+      setMdcResult(null)
+      return
+    }
+       
     
     const value = mdc(numbers.valueA,numbers.valueB)
     setMdcResult(value);
@@ -54,8 +57,8 @@ export default function Mdc() {
         <Main>
             <Title>Digite os numeros que deseja calcular o MDC</Title>
             <RowInputContainer>
-                <Input type="number" onChange={({target})=>handleValueA(target.valueAsNumber)}/>
-                <Input type="number" onChange={({target})=>handleValueB(target.valueAsNumber)}/>
+                <Input type="number" onChange={({target})=>handleValueA(target.valueAsNumber)} min={1}/>
+                <Input type="number" onChange={({target})=>handleValueB(target.valueAsNumber)} min={1}/>
             </RowInputContainer>
             <Button onClick={()=>updateMdc()}>Calcular</Button>
             {mdcResult&&<Result>O MDC é igual a <b>{mdcResult}</b></Result>}
