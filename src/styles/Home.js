@@ -23,6 +23,10 @@ export const Header = styled.header`
 export const Title = styled.h1`
     font-size: 4.5rem;
 
+    @media(max-width: 550px){
+        font-size: 3.25rem;
+    }   
+
     b{
         color: var(--orange);
     }

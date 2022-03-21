@@ -12,6 +12,9 @@ export const Main = styled.section`
 
 export const Title = styled.h1`
     font-size: 2.5rem;
+    @media(max-width: 550px){
+        font-size: 1.25rem;
+    } 
 `
 
 export const InputContainer = styled.div`
@@ -34,4 +37,13 @@ export const Input = styled.input`
     &:focus{
         outline: none;
     }
+`
+
+export const RowInputContainer = styled.div`
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
 `

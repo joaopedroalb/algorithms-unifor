@@ -9,12 +9,18 @@ export const Button = styled.div`
     justify-content: center;
     border-radius: 6px;
     position: absolute;
-    bottom: 10vh;
-    left: calc(100vw - 85px);
+    bottom: calc(1vh + 4rem);
+    left: calc(100vw - 8rem);
+    opacity: .9;
     cursor: pointer;
 
     transition: 400ms;
     &:hover{
         opacity: .6;
+    }
+
+    @media(max-width:600px){
+        bottom: calc(1vh + 1.5rem);
+        left: calc(100vw - 4.25rem);
     }
 `
