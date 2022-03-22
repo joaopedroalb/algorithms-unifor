@@ -9,8 +9,8 @@ export const Button = styled.div`
     justify-content: center;
     border-radius: 6px;
     position: absolute;
-    bottom: calc(1vh + 4rem);
-    left: calc(100vw - 8rem);
+    bottom: calc(1% + 4rem);
+    left: calc(100% - 8rem);
     opacity: .9;
     cursor: pointer;
 
