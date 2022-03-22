@@ -36,7 +36,7 @@ export default function Cont() {
             <Main>
                 <Header>
                     <Title>Digite a Lista e o valor de corte</Title>
-                    <SubTitle>Digite uma lista divindo os números por ESPAÇO ex: "1 5 8 10"</SubTitle>
+                    <SubTitle>Digite uma lista divindo os números por ESPAÇO ex: {`"1 5 8 10"`}</SubTitle>
                 </Header>
                 <InputContainer>
                     <Input onChange={({target})=>setNotes(target.value)}/>
