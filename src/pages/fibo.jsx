@@ -2,6 +2,7 @@ import { useState } from "react";
 import Layout from "../components/Layout";
 import { fibonacci,fibonacciWithouRecursion } from "../functions/algorithmFunc";
 import { Main, Title, InputContainer, Input } from '../styles/StylePageV1'
+import {Result} from '../styles/StylePageV2'
 
 export default function Fibo() {
     const [number,setNumber] = useState(null)
@@ -18,7 +19,7 @@ export default function Fibo() {
             result += ' '+fibo
         }   
 
-        return <h1>{result}</h1>
+        return <Result><b>{result}</b></Result>
     }
 
     return (
