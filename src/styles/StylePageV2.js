@@ -75,3 +75,7 @@ export const Result = styled.h1`
         color: var(--green-ligth);
     }
 `
+
+export const Error = styled.h1`
+    color: var(--red);
+`

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Layout from '../components/Layout'
-import { Main, Header, Title, SubTitle, InputContainer, Input, Button,Result } from '../styles/StylePageV2'
+import { Main, Header, Title, SubTitle, InputContainer, Input, Button,Result,Error } from '../styles/StylePageV2'
 import { Input as InputNumber } from '../styles/StylePageV1'
 
 export default function Cont() {
@@ -9,6 +9,9 @@ export default function Cont() {
     const [result,setResult] = useState(null)
 
     function getListNumber(){
+        if(notes === null || notes === '')
+            return 
+
         const listNumber = notes.split(' ')
                                 .filter(x=>!isNaN(x)&&x!=='')
                                 .map(x=>{return parseFloat(x)})
@@ -28,6 +31,13 @@ export default function Cont() {
         setResult(listFilter)
     }
 
+    function renderResult(){
+        if(result.length<=0)
+            return <Error>Nenhuma nota passou</Error>
+
+        return <Result>Notas que passaram: <b>{result.join(', ')}</b></Result>
+    }
+
     return (
         <Layout
             title="Contagem"
@@ -43,7 +53,7 @@ export default function Cont() {
                     <InputNumber type="number" onChange={({target})=>setMin(target.valueAsNumber)}/>
                     <Button onClick={()=>handleClick()}>Verificar</Button>
                 </InputContainer>
-                {result&&<Result>Notas que passaram: <b>{result.join(', ')}</b></Result>}
+                {result&&renderResult()}
             </Main>
         </Layout>
     )
