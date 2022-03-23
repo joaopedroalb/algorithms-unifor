@@ -35,7 +35,12 @@ export default function Cont() {
         if(result.length<=0)
             return <Error>Nenhuma nota passou</Error>
 
-        return <Result>Notas que passaram: <b>{result.join(', ')}</b></Result>
+        return (
+            <InputContainer>
+                <Result>Notas que passaram: <b>{result.join(', ')}</b></Result>
+                <Result>Total de notas que passaram: <b>{result.length}</b></Result>
+            </InputContainer>
+        )
     }
 
     return (
