@@ -26,7 +26,7 @@ npm run dev OU yarn dev
 Passando um número N a função vai retornar **true** caso o N seja primo e **false** caso contrario
 
 ```jsx
-export const isPrimerWithSqrt = (number) =>{
+export const isPrime = (number) =>{
     let sqrtNumber = Math.sqrt(number)
 
     for(let i = 2; i <= sqrtNumber; i++){
