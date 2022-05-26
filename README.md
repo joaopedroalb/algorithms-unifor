@@ -128,11 +128,14 @@ export const quickSort = (lst) => {
 Passando um valor **A** de corte e uma Lista ele vai retornar uma **lista com todos os valores que sejam maiores ou iguais a A** 
 
 ```jsx
-export const cont = (a,lst) =>{
-	let result = []
-	for(let item in lst)
-		if(item>=a) result.push(item)
+export const intCount = (number,lst) =>{
+    let increment = 0;
+    let valueNumber = Number(number)
 
-	return result
+    if(!isNaN(valueNumber)){
+        for(let i = 0; i<=lst.length; i++) 
+            if(lst[i]>valueNumber)increment++;
+    }
+    return increment
 }
 ```
