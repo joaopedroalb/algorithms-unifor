@@ -92,13 +92,13 @@ export const quickSort = (lst) => {
 }
 
 //Number
-export const intCount = (number) =>{
+export const intCount = (number,lst) =>{
     let increment = 0;
     let valueNumber = Number(number)
 
     if(!isNaN(valueNumber)){
-        for(let i = 1; i<=number; i++) 
-            increment += i;
+        for(let i = 0; i<=lst.length; i++) 
+            if(lst[i]>valueNumber)increment++;
     }
     return increment
 }
