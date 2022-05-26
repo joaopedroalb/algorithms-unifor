@@ -18,6 +18,16 @@ cd algorithms-unifor
 npm install OU yarn install
 npm run dev OU yarn dev
 ```
+## **🧪** Para fazer os testes
+```jsx
+`após o passo a passo acima você pode rodar os testes usando 
+
+npm test
+```
+
+exemplo dos resultados do teste:
+
+<img src="https://cdn.discordapp.com/attachments/580125063186087966/979223600399781928/unknown.png" />
 
 # **📝** Algoritmos usados
 
