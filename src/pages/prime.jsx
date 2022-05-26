@@ -12,7 +12,6 @@ export default function Prime() {
     
     const prime = isPrime(number)
     const color = prime ? "var(--green-ligth)":"var(--red)"
-    console.log(isPrime)
 
     return(
       <h1 style={{color:color}}>{prime ? `${number} é primo`:`${number} NÃO é primo`}</h1>
